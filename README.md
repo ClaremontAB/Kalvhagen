@@ -1,6 +1,5 @@
 # Kalvhagen
 
-*******
 Remember to give the correct URL to the wordpress. I have mine running on localhost and named it kalvhagen. 
 *******
 Untill we have a wordpress running on some server, we can run it locally. 
@@ -8,6 +7,10 @@ This is a guide for Mac https://theme-fusion.com/local-wordpress-installation-ma
 And this is for windows https://sourceforge.net/projects/wampserver/
 Both of them will install and configure PHP, MySQL and everything else that needs to be done to run wordpress. 
 Then you just need to download and install Wordpress. 
+
+This initial code is based on the nice guide and code from the following guy: 
+https://github.com/DreySkee/wp-api-react
+https://medium.freecodecamp.org/how-to-build-react-apps-on-top-of-the-wordpress-rest-api-bcc632808025
 ******* 
 
 
