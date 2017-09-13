@@ -12,7 +12,7 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom';
-
+//@emelie testar
 
 class AppInitializer {
 
@@ -32,7 +32,7 @@ class AppInitializer {
 
                             {this.buildRoutes(response)}
                             <Route render={() => { return <Redirect to="/" /> }} />
-                        </Switch> 
+                        </Switch>
                     </div>
                 </Router>
 
