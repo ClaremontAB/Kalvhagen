@@ -5,6 +5,7 @@ import Home                 from 'components/Home.js';
 import Pages                from 'components/Pages.js';
 import Posts                 from 'components/Posts.js';
 import Header               from 'components/Header.js';
+import '../css/index.css';
 
 import {
     BrowserRouter as Router,

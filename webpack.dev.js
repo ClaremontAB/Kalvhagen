@@ -1,8 +1,10 @@
-var webpack  			= require('webpack');
-var path				= require('path');
-var HtmlWebpackPlugin 	= require('html-webpack-plugin');
 
-module.exports = {	
+var webpack = require('webpack');
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+
+module.exports = {
 	devtool: 'cheap-module-source-map',
 	devServer: {
 		historyApiFallback: true, // This will make the server understand "/some-link" routs instead of "/#/some-link"
@@ -20,7 +22,7 @@ module.exports = {
 	},
 	resolve: {
 		modules: [
-			'node_modules', 
+			'node_modules',
 			'src',
 			path.resolve(__dirname, 'src/scripts'),
 			path.resolve(__dirname, 'node_modules')
@@ -28,7 +30,7 @@ module.exports = {
 		extensions: ['.jsx', '.js'] // Extensions that Webpack is going to expect
 	},
 	module: {
-		// Loaders allow you to preprocess files as you require() or “load” them. 
+		// Loaders allow you to preprocess files as you require() or “load” them.
 		// Loaders are kind of like “tasks” in other build tools, and provide a powerful way to handle frontend build steps.
 		loaders: [
 			{
@@ -38,6 +40,40 @@ module.exports = {
 				],
 				loader: ['react-hot-loader']
 			},
+
+			{
+				test: /\.css$/,
+				use: [
+					require.resolve('style-loader'),
+					{
+						loader: require.resolve('css-loader'),
+						options: {
+							importLoaders: 1,
+						},
+					},
+					{
+						loader: require.resolve('postcss-loader'),
+						options: {
+							// Necessary for external CSS imports to work
+							// https://github.com/facebookincubator/create-react-app/issues/2677
+							ident: 'postcss',
+							plugins: () => [
+								require('postcss-flexbugs-fixes'),
+								autoprefixer({
+									browsers: [
+										'>1%',
+										'last 4 versions',
+										'Firefox ESR',
+										'not ie < 9', // React doesn't support IE8 anyway
+									],
+									flexbox: 'no-2009',
+								}),
+							],
+						},
+					},
+				],
+			},
+
 			{
 				loader: "babel-loader",
 

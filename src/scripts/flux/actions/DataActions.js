@@ -17,8 +17,8 @@ class DataActions {
                 resolve(response.data);
             }).catch((error) => {
                 reject(error);
-            }); 
-        });     
+            });
+        });
     }
 
     // Method for getting Pages data
