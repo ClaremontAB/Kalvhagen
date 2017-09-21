@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:ci": "jest --testResultsProcessor ./node_modules/jest-junit",
     "start": "webpack-dev-server --inline --progress --config webpack.dev.js",
     "build": "npm run clean && webpack -p --progress --config webpack.production.js",
     "clean": "rimraf ./build/*"
@@ -35,8 +36,17 @@
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5",
     "css-loader": "0.28.4",
+    "jest": "21.1.0",
     "style-loader": "0.18.2",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "./junit-test-results.xml",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
   }
 }
