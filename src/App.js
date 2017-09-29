@@ -3,6 +3,7 @@ import Home                 from './Home.js';
 import Pages                from './Pages.js';
 import Posts                 from './Posts.js';
 import Header               from './Header.js';
+
 import './css/index.css';
 
 import {
@@ -23,7 +24,10 @@ class App extends Component {
   }
 
   buildRoutes(response) {
-    return [<Route key='1' component={Posts} path='/posts'/>, <Route key='2' component={Pages} path='/pages'/>]
+    return [
+      <Route key='1' component={Posts} path='/posts'/>,
+      <Route key='2' component={Pages} path='/pages'/>
+    ]
   }
 
   render() {

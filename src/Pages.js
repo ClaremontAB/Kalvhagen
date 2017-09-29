@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReqHandler from './ReqHandler.js';
+import './css/page.css';
 
 class Pages extends Component {
 
@@ -23,7 +24,7 @@ class Pages extends Component {
     render() {
 
         return (
-            <div>
+            <div className="page">
                 <h1>Pages</h1>
                 <p>This page fetches and lists all pages from wordpress</p>
                 <ul>
