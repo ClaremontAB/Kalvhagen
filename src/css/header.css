@@ -1,15 +1,33 @@
+.header {
+  display: block;
+  height: 12em;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, white , lightBlue);
+}
+
 .headerItem {
-  margin-right: 40px;
   position: relative;
   float: right;
   margin-top: 5em;
   font-size: 24px;
+  color: black;
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
+  right:80px;
 }
 
-.header {
-  height: 15em;
-  width: 100%;
-  background-color: pink;
+a.headerItem:hover
+{
+  background-color: #c6f180;
+}
+
+.menuIcon {
+  width: 3em;
+  height: auto;
+  position: absolute;
+  top: 120px;
+  right: 20px;
 }
 
 .topLogo {
