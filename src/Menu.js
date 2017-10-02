@@ -36,6 +36,8 @@ class Menu extends Component {
             <Link to="/pages" key="2" className="menuItem" >Pages</Link>
             <Link to="/pages" key="3" className="menuItem" >Pages</Link>
             <Link to="/pages" key="4" className="menuItem" >Pages</Link>
+            <Link to="/pages" key="5" className="menuItem" >Pages</Link>
+            <Link to="/pages" key="6" className="menuItem" >Pages</Link>
 
           </div>
         </button>
