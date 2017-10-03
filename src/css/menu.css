@@ -2,7 +2,7 @@
   display:block;
   position:absolute;
   z-index:5;
-  top:7em;
+  top:6em;
   right: 0;
   width:12em;
   height:auto;
@@ -20,8 +20,10 @@
 }
 
 .headerMenu {
-  top: 4em;
+  top: 2em;
   position: relative;
+  float:right;
+  right:4em;
 }
 
 .headerItem {
@@ -41,7 +43,7 @@ a.headerItem:hover
   width: 3em;
   height: auto;
   position: absolute;
-  top: 3em;
+  top: 1.4em;
   right: 1em;
   display: inline-block;
 }

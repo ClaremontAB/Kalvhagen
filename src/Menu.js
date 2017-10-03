@@ -10,8 +10,6 @@ class Menu extends Component {
     this.state = ({
       visible: false
     });
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
   }
 
   getMenuItems(cssClass = "headerItem") {
@@ -21,21 +19,18 @@ class Menu extends Component {
         <Link to="/posts" key="1" className={cssClass} >Posts</Link>
         <Link to="/pages" key="2" className={cssClass} >Pages</Link>
         <Link to="/pages" key="3" className={cssClass} >Meny2</Link>
-        <Link to="/pages" key="4" className={cssClass} >Meny3</Link>
-        <Link to="/pages" key="5" className={cssClass} >Meny4</Link>
-        <Link to="/pages" key="6" className={cssClass} >Menyny</Link>
       </div>
     )
   }
 
-  showMenu() {
+  showMenu = () => {
     this.setState({
       visible: true
     });
     document.addEventListener("click", this.hideMenu);
   }
 
-  hideMenu() {
+  hideMenu = () => {
     this.setState({
       visible: false
     });

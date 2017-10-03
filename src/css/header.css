@@ -1,10 +1,11 @@
 .header {
-  height: 8em;
+  height: 6em;
   width: 100%;
-  background: linear-gradient(to right, white , lightBlue);
+  overflow: hidden;
+  background: linear-gradient(to right, #CCCCCC , #666666);
 }
 
 .topLogo {
   height: inherit;
-  width: auto;
+  float:left;
 }
