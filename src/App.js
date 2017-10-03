@@ -34,8 +34,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header />
-
+            <Header />
             <Switch>
                 <Route path="/" component={ Home } exact />
 
