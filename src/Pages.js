@@ -13,7 +13,6 @@ class Pages extends Component {
   }
 
   componentDidMount() {
-    //debugger;
     ReqHandler.getPages()
       .then(res => {
         const pages = res;

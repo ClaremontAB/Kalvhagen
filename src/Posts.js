@@ -13,7 +13,6 @@ class Posts extends Component {
   }
 
   componentDidMount() {
-    //debugger;
     ReqHandler.getPosts()
       .then(res => {
         const posts = res;

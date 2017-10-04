@@ -18,7 +18,8 @@ class Menu extends Component {
         <Link to="/" className={cssClass}>Home</Link>
         <Link to="/posts" key="1" className={cssClass} >Posts</Link>
         <Link to="/pages" key="2" className={cssClass} >Pages</Link>
-        <Link to="/pages" key="3" className={cssClass} >Meny2</Link>
+        <Link to="/page1" key="3" className={cssClass} >Page 1</Link>
+
       </div>
     )
   }

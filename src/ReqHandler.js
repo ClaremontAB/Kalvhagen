@@ -12,9 +12,6 @@ import 'whatwg-fetch';
  getPages() {
     return fetch(this.pagesEndPoint)
       .then((response) => response.json())
-      /*.then((responseJson) => {
-        return responseJson.movies;
-      })*/
       .catch((error) => {
         console.error(error);
       });
@@ -23,9 +20,6 @@ import 'whatwg-fetch';
   getPosts() {
     return fetch(this.postsEndPoint)
       .then((response) => response.json())
-      /*.then((responseJson) => {
-        return responseJson.movies;
-      })*/
       .catch((error) => {
         console.error(error);
       });
