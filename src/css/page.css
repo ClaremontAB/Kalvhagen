@@ -1,6 +1,31 @@
-.page {
+.pageOld {
   display: flex;
   flex-direction: column;
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.page {
+  display: grid;
+  margin: 0 2em 0 2em;
+  grid-template-columns: 1fr 6fr 2fr;
+  grid-gap: 1em;
+  background-color: #fff;
+  color: #444;
+}
+
+.title {
+  margin-left: 1em;
+  font-weight: bold;
+  font-size: 36px;
+}
+.quote {
+  font-size: 20px;
+  font-style: italic;
+  background-color: lightgray;
+  text-align: center;
+  grid-column: 1/4;
+  grid-row: 2;
+  padding: 10px;
+
 }
