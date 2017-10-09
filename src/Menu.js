@@ -10,18 +10,28 @@ class Menu extends Component {
     this.state = ({
       visible: false
     });
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
   }
 
-  showMenu() {
+  getMenuItems(cssClass = "headerItem") {
+    return (
+      <div>
+        <Link to="/" className={cssClass}>Home</Link>
+        <Link to="/posts" key="1" className={cssClass} >Posts</Link>
+        <Link to="/pages" key="2" className={cssClass} >Pages</Link>
+        <Link to="/page1" key="3" className={cssClass} >Page 1</Link>
+
+      </div>
+    )
+  }
+
+  showMenu = () => {
     this.setState({
       visible: true
     });
     document.addEventListener("click", this.hideMenu);
   }
 
-  hideMenu() {
+  hideMenu = () => {
     this.setState({
       visible: false
     });
@@ -30,17 +40,15 @@ class Menu extends Component {
 
   render() {
       return (
-        <button onClick={this.showMenu}>
-          <img className="menuIcon" src={logo} alt="menu"/>
-          <div className={"menu " + (this.state.visible ? "visible " : "")}>
-            <Link to="/pages" key="2" className="menuItem" >Pages</Link>
-            <Link to="/pages" key="3" className="menuItem" >Pages</Link>
-            <Link to="/pages" key="4" className="menuItem" >Pages</Link>
-            <Link to="/pages" key="5" className="menuItem" >Pages</Link>
-            <Link to="/pages" key="6" className="menuItem" >Pages</Link>
-
+        <div>
+          <div className="headerMenu">
+            {this.getMenuItems()}
           </div>
-        </button>
+          <img className="menuButton" src={logo} alt="menu" onClick={this.showMenu}/>
+          <div className={"menu " + (this.state.visible ? "visible " : "")}>
+            {this.getMenuItems("menuItem")}
+          </div>
+      </div>
       );
   }
 }

@@ -1,5 +1,52 @@
-.page {
-  display: block;
+.pageOld {
+  display: flex;
+  flex-direction: column;
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.page {
+  display: grid;
+  margin: 0 2em 0 2em;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5em;
+  background-color: #FFF;
+  color: #444;
+}
+
+@media screen and (min-width: 580px) {
+  .page {
+    grid-template-columns: 1fr 6fr 2fr;
+  }
+  .quote {
+    grid-column: 1/col;
+  }
+}
+
+.title {
+  margin-left: 1em;
+  font-weight: bold;
+  font-size: 36px;
+}
+.quote {
+  font-size: 20px;
+  font-style: italic;
+  background-color: #6a997e;
+  text-align: center;
+  grid-row: 2;
+  padding: 10px 10px 10px 10px;
+
+}
+
+.gridImage {
+  width: 100%;
+  height: auto;
+}
+
+.pageCarouselGrid {
+  display: grid;
+  padding: 1em 2em 1em 2em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.2em;
+  margin: auto;
 }

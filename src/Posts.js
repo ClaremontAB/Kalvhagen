@@ -13,7 +13,6 @@ class Posts extends Component {
   }
 
   componentDidMount() {
-    //debugger;
     ReqHandler.getPosts()
       .then(res => {
         const posts = res;
@@ -22,18 +21,21 @@ class Posts extends Component {
   }
     render() {
       return (
-          <div className='page'>
-              <h1>Posts</h1>
-              <p>This page fetches and lists all posts from wordpress</p>
-              <ul>
-                {this.state.posts.map((post) =>
-                  <div key={post.id}>
-                    <h2> {post.title.rendered} </h2>
-                    <div dangerouslySetInnerHTML={{__html: post.content.rendered}} />
-                  </div>
-                )}
-              </ul>
-          </div>
+        <div>
+          <h1>Posts</h1>
+            <div className='page'>
+                <p/>
+                <p>This page fetches and lists all posts from wordpress</p>
+                <ul>
+                  {this.state.posts.map((post) =>
+                    <div key={post.id}>
+                      <h2> {post.title.rendered} </h2>
+                      <div dangerouslySetInnerHTML={{__html: post.content.rendered}} />
+                    </div>
+                  )}
+                </ul>
+            </div>
+        </div>
       );
     }
 }

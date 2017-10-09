@@ -11,32 +11,28 @@ class imgCarousel extends Component {
     super(props);
 
     this.state = {
-      text: ["hej"]
+      text: ""
     };
   }
 
-  click1() {
-    alert( "image clicked");
-
+  click1(key) {
+    alert("image clicked");
   }
 
   render() {
       return (
-          <Carousel showThumbs={false} autoPlay={true} onClickItem={this.click1}>
+          <Carousel showThumbs={false} autoPlay={false} onClickItem={this.click1} showStatus={false}>
               <div>
-                  <p className="textDiv"> En första text för att fira världens existens</p>
                   <img src={image1} alt="legend1" />
-                  <p className="legend">Legend 1</p>
+                  <p className="legend">Legend image 1</p>
               </div>
               <div>
-                  <p className="textDiv"> Klicka här för att komma framåt i livet</p>
                   <img src={image1} alt="legend2" />
-                  <p className="legend">Legend 2</p>
+                  <p className="legend">Legend image 2</p>
               </div>
               <div>
-                  <p className="textDiv"> Om du läser detta så är du viktig för någon!</p>
                   <img src={image1} alt="legend3"/>
-                  <p className="legend">Legend 3</p>
+                  <p className="legend">Legend image 3</p>
               </div>
           </Carousel>
       );
