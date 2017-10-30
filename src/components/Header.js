@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Home from './Home';
+import image from '../../resources/14774102-4eZZM.jpg';
 
 class Header extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
+        <img id="header-logo" src={image}></img>
         <nav className="navbar navbar-light">
           <ul className="nav navbar-nav">
-            <li><Link to="/">Homes</Link></li>
-            <li><Link to="/category">Category</Link></li>
-            <li><Link to="/products">Products</Link></li>
+            <li className="nav-list"><Link to="/">Home</Link></li>
+            <li className="nav-list"><Link to="/category">Category</Link></li>
+            <li className="nav-list"><Link to="/products">Products</Link></li>
           </ul>
         </nav>
       </div>

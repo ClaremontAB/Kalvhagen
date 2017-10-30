@@ -5,3 +5,28 @@
 .address {
   text-align: center;
 }
+
+.nav-list {
+  float: left;
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.header {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.footer {
+  font-size: x-small;
+}
+
+.home {
+
+}
+
+#header-logo {
+  width: 100px;
+  height: auto;
+}

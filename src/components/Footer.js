@@ -4,7 +4,7 @@ class Footer extends Component {
 
   render () {
     return (
-      <div>
+      <div className="footer">
         <div className="address">
             0709 351521
             Kalvhagen Stockholm
