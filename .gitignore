@@ -2,3 +2,4 @@ node_modules/
 build/
 junit-test-results.xml
 .DS_Store
+npm-debug.log
