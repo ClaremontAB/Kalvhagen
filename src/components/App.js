@@ -1,42 +1,28 @@
 import React, {Component} from 'react';
-import { Link, Route, Switch, BrowserRouter as Router} from 'react-router-dom';
-
-
-class Home extends Component {
-
-  render () {
-    return (
-      <div> Hello home </div>
-    );
-  }
-}
+import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Header from './Header';
+import Home from './Home';
+import Footer from './Footer';
 
 class App extends Component {
 
-	render () {
-		return (
+  render () {
+    return (
       <Router>
         <div>
-
-          <nav className="navbar navbar-light">
-            <ul className="nav navbar-nav">
-              <li><Link to="/">Homes</Link></li>
-              <li><Link to="/category">Category</Link></li>
-              <li><Link to="/products">Products</Link></li>
-            </ul>
-          </nav>
-
+          <Header />
+          <div>
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path="/page1" component={Home}/>
-              <Route path="/page2" component={Home}/>
+              <Route path="/category" component={Home}/>
+              <Route path="/products" component={Home}/>
             </Switch>
-
-
+          </div>
+          <Footer />
         </div>
       </Router>
-		);
-	}
+    )
+  }
 }
 
 export default App;
