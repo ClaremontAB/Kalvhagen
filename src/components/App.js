@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import { Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+
 import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
+
+import '../style/styles.scss';
 
 class App extends Component {
 
