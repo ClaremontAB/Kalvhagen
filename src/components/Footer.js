@@ -15,8 +15,8 @@ class Footer extends Component {
           marcus@kalvhagen-sthlm.se
           Copyright KalvhagenSthlm © 2014
         </div>
-    </div>
-    )
+      </div>
+    );
   }
 }
 
