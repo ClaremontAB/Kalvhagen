@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Home from './Home';
-import image from '../../resources/14774102-4eZZM.jpg';
 
 class Header extends Component {
 
@@ -17,7 +15,7 @@ class Header extends Component {
           </ul>
         </nav>
       </div>
-    )
+    );
   }
 }
 
