@@ -23,21 +23,59 @@
 }
 
 .home {
-
 }
 
+.brand-text {
+  font-size: 15px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
 .header-logo {
-  width: 100px;
+  width: auto;
   height: 100px;
+}
+nav.navbar-fixed-top {
+  position: sticky;
 }
 
 nav.navbar{
    // Animation
+   min-height: 100px;
+   line-height: 50px;
    -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;
 }
 
+nav {
+  .navbar-brand {
+    font-size: 30px;
+  }
+	.navbar-toggle {
+    margin: 30px 15px 13px 0;
+  }
+	a {
+		font-size: 18px;
+		padding-bottom: 35px !important;
+		padding-top: 35px !important;
+    transition: all 0.3s ease;
+	}
+}
+
+
+
 nav.navbar.shrink {
-  min-height: 35px;
-  background-color: blue;
+	min-height: 35px;
+  color: white;
+  .navbar-brand {
+    font-size: 25px;
+  }
+  a {
+    font-size: 15px;
+    padding-bottom: 22px !important;
+    padding-top: 20px !important;
+  }
+  .navbar-toggle {
+    margin: 8px 15px 8px 0;
+    padding: 4px 5px;
+  }
 }

@@ -8,32 +8,44 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shrink: false
+      shrink: false,
+      threshold: 50
     }
   }
   componentDidMount(){
     window.addEventListener("scroll", this.myFunction);
-    }
+  }
 
-    myFunction = () => {
-        if (document.documentElement.scrollTop > 50) {
-            this.setState({
-              shrink: true
-            })
-          }else{
-            this.setState({
-              shrink: false
-            })
-          }
+  componentWillUnMount () {
+    window.removeEventListener("scroll", this.myFunction);
+  }
+
+  myFunction = () => {
+    if (document.documentElement.scrollTop > this.state.threshold) {
+        this.setState({
+          shrink: true,
+          threshold: 0
+        })
+      } else {
+        this.setState({
+          shrink: false,
+          threshold: 50
+        })
       }
+  }
+  getBrandLogo = () => {
+    return (
+      this.state.shrink ? <Navbar.Brand><div className="brand-text">KALVHAGEN</div></Navbar.Brand> : <Image src={image} alt="Kalvhagen" className="header-logo"/>
+    )
+  }
 
   render() {
     return (
       <Navbar inverse collapseOnSelect className={this.state.shrink ? "navbar-fixed-top shrink" : "navbar-fixed-top"}>
           <Navbar.Header>
-            <Navbar.Brand>
-              <Image src={image} className="header-logo"/>
-            </Navbar.Brand>
+            <LinkContainer to="/">
+              {this.getBrandLogo()}
+            </LinkContainer>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
