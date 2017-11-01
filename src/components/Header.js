@@ -1,21 +1,46 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import image from '../../resources/14774102-4eZZM.jpg';
+import {NavItem, Nav, Navbar, Image} from 'react-bootstrap';
+import {LinkContainer} from "react-router-bootstrap";
 
 class Header extends Component {
 
+  componentDidMount(){
+    window.addEventListener("scroll", this.myFunction);
+    }
+
+    myFunction() {
+        if (document.documentElement.scrollTop > 50) {
+            console.log("1");
+          }else{
+            console.log("2");
+          }
+      }
+
   render() {
+    let shrink = {
+      height: "10px",
+      backgroundColor: "blue"
+    };
     return (
-      <div className="header">
-        <img id="header-logo" src={image} />
-        <nav className="navbar navbar-light">
-          <ul className="nav navbar-nav">
-            <li className="nav-list"><Link to="/">Home</Link></li>
-            <li className="nav-list"><Link to="/category">Category</Link></li>
-            <li className="nav-list"><Link to="/products">Products</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <Navbar inverse collapseOnSelect style={shrink}>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <Image src={image} className="header-logo"/>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              <LinkContainer to="/home">
+                <NavItem eventKey={2}>Home</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/category">
+                <NavItem eventKey={3}>Book Inv</NavItem>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
     );
   }
 }
