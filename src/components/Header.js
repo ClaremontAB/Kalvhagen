@@ -5,25 +5,31 @@ import {LinkContainer} from "react-router-bootstrap";
 
 class Header extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      shrink: false
+    }
+  }
   componentDidMount(){
     window.addEventListener("scroll", this.myFunction);
     }
 
-    myFunction() {
+    myFunction = () => {
         if (document.documentElement.scrollTop > 50) {
-            console.log("1");
+            this.setState({
+              shrink: true
+            })
           }else{
-            console.log("2");
+            this.setState({
+              shrink: false
+            })
           }
       }
 
   render() {
-    let shrink = {
-      height: "10px",
-      backgroundColor: "blue"
-    };
     return (
-      <Navbar inverse collapseOnSelect style={shrink}>
+      <Navbar inverse collapseOnSelect className={this.state.shrink ? "navbar-fixed-top shrink" : "navbar-fixed-top"}>
           <Navbar.Header>
             <Navbar.Brand>
               <Image src={image} className="header-logo"/>
