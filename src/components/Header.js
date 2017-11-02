@@ -20,6 +20,10 @@ class Header extends Component {
     window.removeEventListener("scroll", this.myFunction);
   }
 
+  componentDidCatch (err, info) {
+    console.log(info);
+  }
+
   myFunction = () => {
     if (document.documentElement.scrollTop > this.state.threshold) {
         this.setState({
@@ -51,10 +55,10 @@ class Header extends Component {
           <Navbar.Collapse>
             <Nav>
               <LinkContainer to="/home">
-                <NavItem eventKey={2}>Home</NavItem>
+                <NavItem eventKey={1}>Home</NavItem>
               </LinkContainer>
-              <LinkContainer to="/category">
-                <NavItem eventKey={3}>Book Inv</NavItem>
+              <LinkContainer to="/categor">
+                <NavItem eventKey={2}>Away</NavItem>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>
