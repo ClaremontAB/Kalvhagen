@@ -13,18 +13,18 @@ class Header extends Component {
     }
   }
   componentDidMount(){
-    window.addEventListener("scroll", this.myFunction);
+    window.addEventListener("scroll", this.shrinkOnScroll);
   }
 
-  componentWillUnMount () {
-    window.removeEventListener("scroll", this.myFunction);
+  componentWillUnmount () {
+    window.removeEventListener("scroll", this.shrinkOnScroll);
   }
 
   componentDidCatch (err, info) {
     console.log(info);
   }
 
-  myFunction = () => {
+  shrinkOnScroll = () => {
     if (document.documentElement.scrollTop > this.state.threshold) {
         this.setState({
           shrink: true,
