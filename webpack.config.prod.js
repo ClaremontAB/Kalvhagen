@@ -127,7 +127,11 @@ export default {
         ]
       },
       {
-        test: /(\.css|\.scss|\.sass)$/,
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /(\.scss|\.sass)$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           use: [
