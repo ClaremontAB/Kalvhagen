@@ -5,7 +5,10 @@
 .address {
   text-align: center;
 }
-
+.numver {
+  color: red;
+  font-weight: bold;
+}
 .nav-list {
   float: left;
   list-style-type: none;
@@ -20,9 +23,12 @@
 
 .footer {
   font-size: x-small;
+  color: #FFF;
+  background-color: rgb(34, 34, 34);
 }
 
 .home {
+
 }
 
 .brand-text {
@@ -55,13 +61,11 @@ nav {
   }
 	a {
 		font-size: 18px;
-		padding-bottom: 35px !important;
+		padding-bottom: 45px !important;
 		padding-top: 35px !important;
     transition: all 0.3s ease;
 	}
 }
-
-
 
 nav.navbar.shrink {
 	min-height: 35px;
@@ -77,5 +81,11 @@ nav.navbar.shrink {
   .navbar-toggle {
     margin: 8px 15px 8px 0;
     padding: 4px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    margin-left: 15px;
   }
 }
