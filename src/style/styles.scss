@@ -19,13 +19,27 @@
 }
 
 .footer {
-  font-size: x-small;
+  font-size: small;
   color: #FFF;
   background-color: rgb(34, 34, 34);
 }
 
 .home {
 
+}
+
+.social-media-icons {
+    display: flex;
+    max-height: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+
+.social-media-icons img {
+  width: 25px;
+  margin: 5px 5px 5px 5px;
 }
 
 .brand-text {
