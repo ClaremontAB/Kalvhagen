@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
 import MyCarousel from './Carousel';
 
+import kick1 from "../../resources/kick1.jpg";
+import kick2 from "../../resources/kick2.jpg";
+import kick3 from "../../resources/kick3.jpg";
+
+const carouselItems = [
+    {
+      imgSrc: kick1,
+      label: "First slide label",
+      caption: "Text här som beskriver slide 1"
+    },{
+      imgSrc: kick2,
+      label: "Second slide label",
+      caption: "Text här som beskriver slide 2"
+    },{
+      imgSrc: kick3,
+      label: "Third slide label",
+      caption: "Text här som beskriver slide 3"
+    }
+];
 
 class About extends Component {
 
   render () {
     return (
       <div>
-        <MyCarousel />
+        <MyCarousel slides={carouselItems} />
         <div className="container-fluid">
           <h3> OM OSS </h3>
           <p> <b>Kalvhagen-Sthlm är ursprungligen en Kickboxningsklubb</b> som startade 2007. Många av våra medlemmar använder Kickboxningen som ett komplement till sin ordinarie träning. Vår metodik är att alla kör med alla oavsett nivå.
