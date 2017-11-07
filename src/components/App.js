@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
-import Header from './Header';
-import Home from './Home';
+import Header from './common/Header';
+import Home from './home/Home';
 import Training from './Training';
-import About from './About';
+import About from './about/About';
 import Schedule from './Schedule';
-import Footer from './Footer';
+import Footer from './common/Footer';
 
 import '../style/styles.scss';
 

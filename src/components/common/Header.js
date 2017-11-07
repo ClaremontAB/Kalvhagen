@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import image from '../../resources/14774102-4eZZM.jpg';
+import image from '../../../resources/14774102-4eZZM.jpg';
 import {NavItem, Nav, Navbar, Image} from 'react-bootstrap';
 import {LinkContainer} from "react-router-bootstrap";
 

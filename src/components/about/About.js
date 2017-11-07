@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MyCarousel from './Carousel';
+import MyCarousel from '../common/Carousel';
 
-import kick1 from "../../resources/kick1.jpg";
-import kick2 from "../../resources/kick2.jpg";
-import kick3 from "../../resources/kick3.jpg";
+import kick1 from "../../../resources/kick1.jpg";
+import kick2 from "../../../resources/kick2.jpg";
+import kick3 from "../../../resources/kick3.jpg";
 
 const carouselItems = [
     {
