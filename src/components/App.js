@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, Router } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 
 import Header from './common/Header';
 import Home from './home/Home';
@@ -10,11 +11,16 @@ import Footer from './common/Footer';
 
 import '../style/styles.scss';
 
+const history = createHistory();
+history.listen(() => {
+  window.scrollTo(0,0);
+});
+
 class App extends Component {
 
   render () {
     return (
-      <Router>
+      <Router history={history}>
         <div>
           <Header />
             <Switch>
