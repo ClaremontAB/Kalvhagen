@@ -11,7 +11,7 @@ const carouselItems = [
       label: "First slide label",
       caption: "Text här som beskriver slide 1"
     },{
-      imgSrc: "kick2",
+      imgSrc: kick2,
       label: "Second slide label",
       caption: "Text här som beskriver slide 2"
     },{

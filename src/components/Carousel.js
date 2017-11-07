@@ -19,11 +19,12 @@ const MyCarousel = ({slides, width}) => {
 };
 
 MyCarousel.propTypes = {
-  slides: PropTypes.array.isRequired
+  slides: PropTypes.array.isRequired,
+  width: PropTypes.string.isRequired
 };
 
 MyCarousel.defaultProps = {
   width: "100%"
-}
+};
 
 export default MyCarousel;
