@@ -1,40 +1,29 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
-import kick1 from "../../resources/kick1.jpg";
-import kick2 from "../../resources/kick2.jpg";
-import kick3 from "../../resources/kick3.jpg";
-
-class MyCarousel extends Component {
-
-  render () {
-    return (
-      <Carousel>
-        <Carousel.Item>
-          <img width={"100%"} height={"auto"} alt="900x500" src={kick1}/>
+const MyCarousel = ({slides, width}) => {
+  return (
+    <Carousel>
+      {slides.map((slide, index) =>
+        (<Carousel.Item key={index}>
+          <img width={width} alt={slide.label} src={slide.imgSrc}/>
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Text här som beskriver slide 1</p>
+            <h3>{slide.label}</h3>
+            <p>{slide.caption}</p>
           </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={"100%"} height={"auto"} alt="900x500" src={kick2} />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>För jag tycker att riktigt text ser bättre ut än lorem ipsum</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img width={"100%"} height={"auto"} alt="900x500" src={kick3} />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>En tanke är att man slänger in en navigation on click här</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    );
-  }
+        </Carousel.Item>)
+      )}
+    </Carousel>
+  );
+};
 
+MyCarousel.propTypes = {
+  slides: PropTypes.array.isRequired
+};
+
+MyCarousel.defaultProps = {
+  width: "100%"
 }
 
 export default MyCarousel;
