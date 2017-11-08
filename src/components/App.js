@@ -12,7 +12,11 @@ import Footer from './common/Footer';
 import '../style/styles.scss';
 
 const history = createHistory();
-history.listen(() => {
+history.listen((location, action) => {
+  //Hack to remove extra focus from header-link when clicking back
+  if (action === 'POP') {
+    document.activeElement.blur();
+  }
   window.scrollTo(0,0);
 });
 
