@@ -1,5 +1,5 @@
 import React from 'react';
-import {OverlayTrigger, Image, Popover, Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Image, Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 let fillBlank = (idx) => {
