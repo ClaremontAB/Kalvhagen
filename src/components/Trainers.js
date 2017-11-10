@@ -110,7 +110,7 @@ class Trainers extends Component {
       <div>
         <PortraitGrid trainers={trainers} />
       </div>
-    )
+    );
   }
 }
 
