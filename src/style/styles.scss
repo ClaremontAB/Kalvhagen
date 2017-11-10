@@ -51,6 +51,10 @@
   width: auto;
   height: 100px;
 }
+
+.portrait-container {
+  display: inline-flex;
+}
 nav.navbar-fixed-top {
   position: sticky;
 }
@@ -103,5 +107,9 @@ nav.navbar.shrink {
 @media (max-width: 768px) {
   .header-logo {
     margin-left: 15px;
+  }
+
+  .portrait-container {
+    flex-direction: column;
   }
 }

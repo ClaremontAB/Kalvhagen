@@ -38,7 +38,7 @@ class About extends Component {
 
           Att kunna se till vad kunden behöver, att använda kunskap och sunt förnuft - och inte vad den senaste trenden i kvällstidningen säger - blir mer och mer viktigt eftersom vi  hela tiden matas med ständigt nya dietmetoder och träningsknep."
           </p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.2626818955748!2d18.056934851925984!3d59.345262881574435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6ea8cc53c7%3A0xb24c9c7b5dea0b3b!2sKalvhagen+Stockholm!5e0!3m2!1sen!2sse!4v1509978355646" width="100%" height="450" frameBorder="0" style={{border:0}}></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.2626818955748!2d18.056934851925984!3d59.345262881574435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6ea8cc53c7%3A0xb24c9c7b5dea0b3b!2sKalvhagen+Stockholm!5e0!3m2!1sen!2sse!4v1509978355646" width="100%" height="450" frameBorder="0" style={{border:0}} />
         </div>
       </div>
     );

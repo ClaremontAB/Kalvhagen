@@ -65,8 +65,11 @@ class Header extends Component {
               <LinkContainer to="/schedule">
                 <NavItem eventKey={2}>Schema</NavItem>
               </LinkContainer>
+              <LinkContainer to="/trainers">
+                <NavItem eventKey={3}>Tränare</NavItem>
+              </LinkContainer>
               <LinkContainer to="/about">
-                <NavItem eventKey={3}>About</NavItem>
+                <NavItem eventKey={4}>About</NavItem>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

@@ -7,6 +7,7 @@ import Home from './home/Home';
 import Training from './Training';
 import About from './about/About';
 import Schedule from './Schedule';
+import Trainers from './Trainers';
 import Footer from './common/Footer';
 
 import '../style/styles.scss';
@@ -32,6 +33,7 @@ class App extends Component {
               <Route path="/training" component={Training}/>
               <Route path="/about" component={About}/>
               <Route path="/schedule" component={Schedule}/>
+              <Route path="/trainers" component={Trainers}/>
             </Switch>
           <Footer />
         </div>
