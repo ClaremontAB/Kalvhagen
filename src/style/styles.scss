@@ -67,6 +67,7 @@ nav.navbar{
 nav {
   .navbar-brand {
     font-size: 30px;
+
   }
 	.navbar-toggle {
     margin: 30px 15px 13px 0;
@@ -74,9 +75,13 @@ nav {
 	a {
 		font-size: 18px;
 		padding-bottom: 45px !important;
-		padding-top: 35px !important;
+		padding-top: 40px !important;
     transition: all 0.3s ease;
 	}
+}
+
+.navbar-header{
+  padding-top: 5px;
 }
 
 nav.navbar.shrink {
@@ -92,7 +97,6 @@ nav.navbar.shrink {
   }
   .navbar-toggle {
     margin: 8px 15px 8px 0;
-    padding: 4px 5px;
   }
 }
 
