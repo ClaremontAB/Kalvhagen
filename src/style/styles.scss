@@ -51,9 +51,11 @@
   width: auto;
   height: 100px;
 }
-
-.portrait-container {
-  display: inline-flex;
+.video-wrap {
+  width: 100%;
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
 }
 nav.navbar-fixed-top {
   position: sticky;
@@ -82,6 +84,9 @@ nav {
 		padding-top: 40px !important;
     transition: all 0.3s ease;
 	}
+  li {
+    max-height: 70px;
+  }
 }
 
 .navbar-header{
@@ -107,9 +112,5 @@ nav.navbar.shrink {
 @media (max-width: 768px) {
   .header-logo {
     margin-left: 15px;
-  }
-
-  .portrait-container {
-    flex-direction: column;
   }
 }
