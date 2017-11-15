@@ -16,20 +16,20 @@ let fillBlank = (idx) => {
 const PortraitGrid = ({trainers}) => {
 
   return (
-    <Grid>
-      <Row className="show-grid">
-        {trainers.map((trainer, idx) =>
-          (<div  key={idx}>
-            {fillBlank(idx)}
-            <Col sm={6} md={3} xsOffset={1} mdOffset={0} smOffset={0}>
-              <h4> Instruktör: {trainer.name} </h4>
-              <Image src={trainer.imgSrc} responsive thumbnail />
-              <p> {trainer.desc} </p>
-            </Col>
-          </div>)
-        )}
-      </Row>
-    </Grid>
+      <Grid>
+        <Row className="show-grid">
+          {trainers.map((trainer, idx) =>
+            (<div  key={idx}>
+              {fillBlank(idx)}
+              <Col sm={6} md={3} xsOffset={0} mdOffset={0} smOffset={0}>
+                <h4> Instruktör: {trainer.name} </h4>
+                <Image src={trainer.imgSrc} responsive thumbnail />
+                <p> {trainer.desc} </p>
+              </Col>
+            </div>)
+          )}
+        </Row>
+      </Grid>
   );
 };
 
