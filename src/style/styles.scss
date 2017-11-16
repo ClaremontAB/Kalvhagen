@@ -1,3 +1,14 @@
+$headerColor: #405559;
+$bgColor: #3E3E3E;
+$secondarycolor: #68868C;
+$textColor: #EDEDED;
+
+body {
+  background-color: $bgColor !important;
+  color: $textColor !important;
+}
+
+
 .copyright {
   text-align: center;
 }
@@ -20,8 +31,8 @@
 
 .footer {
   font-size: small;
-  color: #FFF;
-  background-color: rgb(34, 34, 34);
+  color: $textColor;
+  background-color: $headerColor;
 }
 
 .home {
@@ -68,6 +79,7 @@ nav.navbar{
    -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;
    margin-bottom: 0;
+   background-color: $headerColor;
 }
 
 nav {

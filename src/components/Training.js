@@ -28,7 +28,7 @@ class Training extends Component {
         Linda är målinriktad, tränar och tävla inom ridsport och kom i kontakt med Kalvhagen då hon började träna för Marcus.
         Under åren har hon själv gått till massör och kiropraktor för att få hjälp med de spänningar och låsningar hon haft. "-För mig är det viktigt att kroppen fungera som den ska".
         Nu vill Linda hjälpa andra som har besvär med sin kropp eller bara behöver en mjukgörande massage för muskler.
-        Ni bokar en tid på <b style={{color: "maroon"}}>0703 45 59 24</b></p>
+        Ni bokar en tid på <b style={{color: "#68868C"}}>0703 45 59 24</b></p>
         <h4> UTBILDNINGAR: </h4>
         <ul>
         <li>Axelsons Gymnastiska institut - Friskvårdsmassör</li>
