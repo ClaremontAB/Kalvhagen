@@ -1,0 +1,33 @@
+
+.copyright {
+  text-align: center;
+}
+
+.address {
+  text-align: center;
+}
+
+.nav-list {
+  float: left;
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+.footer {
+  font-size: small;
+  color: white;//$secondaryColor;//$textColor;
+  background-color: $headerColor;
+}
+
+.social-media-icons {
+    display: flex;
+    max-height: 25px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+}
+
+.social-media-icons img {
+  width: 25px;
+  margin: 5px 5px 5px 5px;
+}
