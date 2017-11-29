@@ -13,7 +13,7 @@ const fillBlank = (idx) => {
   return retObject;
 };
 
-const imageClicked = (e) => {
+const imageClicked = (e, portrait) => {
   e.preventDefault();
   let target = e.target;
   if (target.className !== "clicked-image") {
@@ -21,6 +21,7 @@ const imageClicked = (e) => {
   } else {
     target.className = "image-container";
   }
+  return portrait.src;
 };
 
 const PortraitGrid = ({portraits}) => {
@@ -32,8 +33,8 @@ const PortraitGrid = ({portraits}) => {
             (<div key={idx}>
               {fillBlank(idx)}
               <Col sm={6} md={3} xsOffset={0} mdOffset={0} smOffset={0}>
-                <div className="image-container" onClick={imageClicked}>
-                  <Image src={portrait.imgSrc} responsive  className="image-container" />
+                <div>
+                  <Image src='path' onClick={imageClicked, portrait} responsive  className="image-container" />
                 </div>
                 <div style={{marginRight: ""}}>
                   <h4> {portrait.name} </h4>
