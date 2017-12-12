@@ -71,6 +71,9 @@ class Header extends Component {
               <LinkContainer to="/about">
                 <NavItem eventKey={4}>About</NavItem>
               </LinkContainer>
+              <LinkContainer to="/componentsPage">
+                <NavItem eventKey={5}>Komponenter</NavItem>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
