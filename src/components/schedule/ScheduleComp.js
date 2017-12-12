@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { ButtonToolbar, Button, Modal } from 'react-bootstrap';
+import { ButtonToolbar, ButtonGroup, Button, Modal } from 'react-bootstrap';
 
 class ScheduleComp extends Component {
 
@@ -65,11 +65,9 @@ class ScheduleComp extends Component {
         <h3> {this.props.title}</h3>
         <h4> {this.props.time}</h4>
         <Link to='/trainers'> <h3>Sten Hård </h3></Link>
-        <ButtonToolbar>
-          <Button onClick={this.open} > Mer info </Button>
-          {modalComp}
-          <Button onClick={this.bookClick} > Boka </Button>
-        </ButtonToolbar>
+        <Button className="schedule-button" onClick={this.open} > Mer info </Button>
+        {modalComp}
+        <Button className="schedule-button" onClick={this.bookClick} > Boka </Button>
       </div>
     )
   }
