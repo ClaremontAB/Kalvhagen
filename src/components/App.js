@@ -6,7 +6,7 @@ import Header from './common/Header';
 import Home from './home/Home';
 import Training from './Training';
 import About from './about/About';
-import Schedule from './Schedule';
+import Schedule from './schedule/Schedule';
 import Trainers from './Trainers';
 import Footer from './common/Footer';
 import ComponentsPage from './ComponentsPage';

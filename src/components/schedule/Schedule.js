@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import {Table} from 'react-bootstrap';
 
+import ScheduleComp from './ScheduleComp';
+
 class Schedule extends Component {
 
   render () {
     return (
+      <div>
       <Table responsive>
         <thead>
           <tr>
@@ -76,6 +79,8 @@ class Schedule extends Component {
           </tr>
         </tbody>
       </Table>
+      <ScheduleComp title="Kickboxning" time="Må 08:30"/>
+      </div>
     );
   }
 
