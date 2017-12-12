@@ -50,12 +50,16 @@ class ScheduleComp extends Component {
             <h4><b> Beskrivning av passet:</b></h4>
             <p>Vi kickas och boxas så det står härliga till</p>
             <p>Sparka, flyg, roundhouse.</p>
+            <p>Till och med Patrick Swayze kommer vara avundsjuk när ni är klara med passet</p>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>
           </Modal.Footer>
         </Modal>
     );
+
+
+
     return (
       <div className="schedule-comp-container">
         <h3> {this.props.title}</h3>
