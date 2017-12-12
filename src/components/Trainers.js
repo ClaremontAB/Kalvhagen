@@ -108,7 +108,7 @@ class Trainers extends Component {
   render () {
     return (
       <div>
-        <PortraitGrid trainers={trainers} />
+        <PortraitGrid portraits={trainers} />
       </div>
     );
   }

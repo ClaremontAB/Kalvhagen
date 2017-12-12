@@ -1,0 +1,37 @@
+.video-wrap {
+  width: 100%;
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home-img-container {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+}
+
+.home-page-image {
+  width: 100%;
+  height: 50em;
+  background: url("../../resources/koncept-background.jpg") no-repeat center;
+  background-size: cover;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+    opacity: .6;
+  }
+}
+
+.image-text {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  color: #d4c967;
+}
