@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import { ButtonToolbar, ButtonGroup, Button, Modal } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Button, Modal } from 'react-bootstrap';
 
 class ScheduleComp extends Component {
 
   constructor (props) {
     super(props);
     this.state = {
-      showModal: false
-    }
+      showInfo: false
+    };
   }
-  close = () => {
-    this.setState({ showModal: false });
-  }
-
-  open = () => {
-    this.setState({ showModal: true });
+  close = (e) => {
+    e.preventDefault();
+    this.setState({ showInfo: false });
   }
 
-  moreInfoClick = () => {
-    console.log('more info om inget');
+  open = (e) => {
+    e.preventDefault();
+    this.setState({ showInfo: true });
   }
 
   bookClick = () => {
@@ -29,7 +27,7 @@ class ScheduleComp extends Component {
 
   render () {
     const modalComp = (
-      <Modal show={this.state.showModal} onHide={this.close}>
+      <Modal show={this.state.showInfo} onHide={this.close}>
           <Modal.Header closeButton>
             <Modal.Title>{this.props.title}</Modal.Title>
             <h4> <b> {this.props.time} </b> </h4>
@@ -64,14 +62,19 @@ class ScheduleComp extends Component {
       <div className="schedule-comp-container">
         <h3> {this.props.title}</h3>
         <h4> {this.props.time}</h4>
-        <Link to='/trainers'> <h3>Sten Hård </h3></Link>
+        <Link to="/trainers"> <h3>Sten Hård </h3></Link>
         <Button className="schedule-button" onClick={this.open} > Mer info </Button>
         {modalComp}
         <Button className="schedule-button" onClick={this.bookClick} > Boka </Button>
       </div>
-    )
+    );
   }
 
 }
+
+ScheduleComp.propTypes = {
+  title: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired
+};
 
 export default ScheduleComp;

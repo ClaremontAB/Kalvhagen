@@ -9,7 +9,7 @@ class PortraitGrid extends Component {
     super(props);
     this.state = {
       portraits: props.portraits,
-    }
+    };
   }
   fillBlank = (idx) => {
     let retObject;
@@ -29,7 +29,7 @@ class PortraitGrid extends Component {
 
     this.setState({
       portraits: portraits,
-    })
+    });
   };
 
   render () {
@@ -40,19 +40,18 @@ class PortraitGrid extends Component {
               (<div key={idx}>
                 {this.fillBlank(idx)}
                 <Col sm={6} md={3} xsOffset={0} mdOffset={0} smOffset={0}>
-                  <div className='portrait-wrapper' onClick={() => this.imageClicked(idx)}>
+                  <div className="portrait-wrapper" onClick={() => this.imageClicked(idx)}>
                     {portrait.flip ?
-                      (<div style={{width:'inherit', height:'auto', paddingBottom: '100%'}}>
+                      (<div style={{width:"inherit", height:"auto", paddingBottom: "100%"}}>
                         <Image src={portrait.imgSrc} responsive  className="image-container" />
-                        <div className='overlay' />
-                        <h4 className='portrait-name'> {portrait.name} </h4>
-                        <p className='text-box'> {portrait.desc} </p>
+                        <div className="overlay" />
+                        <h4 className="portrait-name"> {portrait.name} </h4>
+                        <p className="text-box"> {portrait.desc} </p>
                       </div>
                     )
                       : <Image src={portrait.imgSrc} responsive  className="image-container" />}
                   </div>
-                  <div style={{marginRight: ""}}>
-                  </div>
+                  <div style={{marginRight: ""}} />
                 </Col>
               </div>)
             )}
