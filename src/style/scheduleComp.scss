@@ -2,10 +2,25 @@
   width: 15em;
   padding: 5px;
   margin: 0 15px 15px 15px;
+  position: relative;
   text-align: center;
   border: 2px solid blue;
 }
 
 .schedule-button {
   margin: 0 0.5em;
+}
+
+
+.instagram-media {
+  background:#FFF;
+  border:0;
+  border-radius:3px;
+  box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+  margin: 1px;
+  max-width:658px;
+  padding:0;
+  width:99.375%;
+  width:-webkit-calc(100% - 2px);
+  width:calc(100% - 2px);
 }

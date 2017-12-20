@@ -24,7 +24,6 @@ class PortraitGrid extends Component {
 
   imageClicked = (idx) => {
     let portraits = {...this.state.portraits};
-
     portraits[idx].flip = portraits[idx].flip ? false : true;
 
     this.setState({

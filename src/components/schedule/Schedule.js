@@ -1,11 +1,35 @@
 import React, { Component } from 'react';
-import {Table} from 'react-bootstrap';
+import {Grid, Row, Col, Table} from 'react-bootstrap';
 
 import ScheduleComp from './ScheduleComp';
 
 class Schedule extends Component {
 
   render () {
+
+    const scheduleData = [{
+        title: "Kickboxning",
+        time: "Må 08:30"
+    },{
+        title: "Thaiboxning",
+        time: "Må 11:30"
+    }, {
+        title: "BeatBox",
+        time: "Ti 12:30"
+    }, {
+        title: "Yoga",
+        time: "On 13.30"
+    }, {
+        title: "Sparkplug",
+        time: "To 07:30"
+    }, {
+        title: "Thaiboxning",
+        time: "To 17:30"
+    }, {
+        title: "AW-box",
+        time: "Fr 18:30"
+    }];
+
     return (
       <div>
       <Table responsive>
@@ -79,7 +103,16 @@ class Schedule extends Component {
           </tr>
         </tbody>
       </Table>
-      <ScheduleComp title="Kickboxning" time="Må 08:30"/>
+
+      <Grid style={{paddingTop: "20px"}}>
+        <Row className="show-grid">
+          {scheduleData.map((pass, idx) => (
+              <Col key={idx} sm={4} md={3} xsOffset={0} mdOffset={0} smOffset={0}>
+                <ScheduleComp title={pass.title} time={pass.time} />
+              </Col>
+          ))}
+        </Row>
+      </Grid>
       </div>
     );
   }

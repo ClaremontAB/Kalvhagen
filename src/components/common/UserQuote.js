@@ -4,9 +4,7 @@ import {Thumbnail} from 'react-bootstrap';
 import bild from '../../../resources/trainer-marcus.jpg';
 
 const UserQuote = () => {
-  //image
-  //citat-text
-  //sammanhang på CitatText
+
   return (
     <Thumbnail src={bild} className="user-quote-container">
       <h3> Peter Kräm </h3>
