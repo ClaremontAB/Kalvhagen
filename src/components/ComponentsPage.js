@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import UserQuote from './common/UserQuote';
-import ScheduleComp from './schedule/ScheduleComp';
 
 class ComponentsPage extends Component {
 
@@ -22,7 +21,7 @@ class ComponentsPage extends Component {
                 </div>
               </div>*/}
               <p style={{margin:"8px 0 0 0", padding:"0 4px"}}>
-                <a href={url} style={{color:"#000", fontFamily:"Arial,sans-serif", fontSize:"14px", fontStyle:"normal", fontWeight:"normal", lineHeight:"17px", textDecoration:"none", wordWrap:"break-word"}} target="_blank"></a>
+                <a href={url} style={{color:"#000", fontFamily:"Arial,sans-serif", fontSize:"14px", fontStyle:"normal", fontWeight:"normal", lineHeight:"17px", textDecoration:"none", wordWrap:"break-word"}} target="_blank" />
               </p>
             {/*</div>*/}
           </blockquote>)
@@ -34,7 +33,6 @@ class ComponentsPage extends Component {
       <div>
         <div className="container-fluid" style={{display: "inline-flex"}}>
           <UserQuote />
-          <ScheduleComp title="Kickboxning" time="On 10:30"/>
         </div>
         <div>
         {instagramEmbed}

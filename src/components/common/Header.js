@@ -20,10 +20,6 @@ class Header extends Component {
     window.removeEventListener("scroll", this.shrinkOnScroll);
   }
 
-  componentDidCatch (err, info) {
-    console.log(info);
-  }
-
   shrinkOnScroll = () => {
     const scrollTop = document.documentElement.scrollTop || window.scrollY;
     if (scrollTop > this.state.threshold) {
@@ -73,6 +69,9 @@ class Header extends Component {
               </LinkContainer>
               <LinkContainer to="/componentsPage">
                 <NavItem eventKey={5}>Komponenter</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/booking">
+                <NavItem eventKey={6}>Bokning</NavItem>
               </LinkContainer>
             </Nav>
           </Navbar.Collapse>

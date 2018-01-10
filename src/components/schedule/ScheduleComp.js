@@ -8,29 +8,36 @@ class ScheduleComp extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      showInfo: false
+      showInfo: false,
+      showBooking: false
     };
   }
-  close = (e) => {
+  closeInfo = (e) => {
     e.preventDefault();
     this.setState({ showInfo: false });
   }
 
-  open = (e) => {
+  openInfo = (e) => {
     e.preventDefault();
     this.setState({ showInfo: true });
   }
 
-  bookClick = () => {
-    console.log('bokat typ kind of');
+  openBooking = (e) => {
+    e.preventDefault();
+    this.setState({ showBooking: true });
+  }
+
+  closeBooking = (e) => {
+    e.preventDefault();
+    this.setState({ showBooking: false });
   }
 
   render () {
-    const modalComp = (
-      <Modal show={this.state.showInfo} onHide={this.close}>
+    const infoModal = (
+      <Modal show={this.state.showInfo} onHide={this.closeInfo}>
           <Modal.Header closeButton>
-            <Modal.Title>{this.props.title}</Modal.Title>
-            <h4> <b> {this.props.time} </b> </h4>
+            <Modal.Title>{this.props.pass.title}</Modal.Title>
+            <h4> <b> {this.props.pass.time} </b> </h4>
           </Modal.Header>
           <Modal.Body>
             <h4><b> Tänk på:<br/> </b></h4>
@@ -39,7 +46,7 @@ class ScheduleComp extends Component {
               <li>Kom i tid, 15 min innan passet.</li>
               <li>Du kan delta på alla våra pass oavsett erfarenhet.</li>
               <li>Utrustning finns att låna, du kan även köpa egna skydd på plats.</li>
-              <li>Klädsel: Shorts/träningsbyxa och T-shirt/linne. Vi kör barfota (klipp finger/tår-naglarna. Smart att ta med en svetthandduk.</li>
+              <li>Klädsel: Shorts/träningsbyxa och T-shirt/linne. Vi kör barfota (klipp finger/tå-naglarna. Smart att ta med en svetthandduk.</li>
               <li>Omklädningsrum och duschar finns.</li>
             </ul>
 
@@ -51,21 +58,40 @@ class ScheduleComp extends Component {
             <p>Till och med Patrick Swayze kommer vara avundsjuk när ni är klara med passet</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
+            <Button onClick={this.closeInfo}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+    );
+
+    const bookingModal = (
+      <Modal show={this.state.showBooking} onHide={this.closeBooking}>
+          <Modal.Header closeButton>
+            <Modal.Title>{this.props.pass.title}</Modal.Title>
+            <h4> <b> {this.props.pass.time} </b> </h4>
+          </Modal.Header>
+          <Modal.Body>
+          <p> Antal platser kvar :  {this.props.pass.slot > 0 ? "Lediga platser: " + this.props.pass.slot : "Fullbokat"} </p>
+            First name: <input type="text" name="FirstName" placeholder="Förnamn"/><br/>
+            Last name: <input type="text" name="LastName" placeholder="Efternamn"/><br/>
+            <button onClick={this.props.book}>Skicka </button>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.closeBooking}>Stäng</Button>
           </Modal.Footer>
         </Modal>
     );
 
 
-
     return (
       <div className="schedule-comp-container">
-        <h3> {this.props.title}</h3>
-        <h4> {this.props.time}</h4>
+        <h3> {this.props.pass.title}</h3>
+        <h4> {this.props.pass.time}</h4>
+        <h4> {this.props.pass.slot > 0 ? "Lediga platser: " + this.props.pass.slot : "Fullbokat"}</h4>
         <Link to="/trainers"> <h3>Sten Hård </h3></Link>
-        <Button className="schedule-button" onClick={this.open} > Mer info </Button>
-        {modalComp}
-        <Button className="schedule-button" onClick={this.bookClick} > Boka </Button>
+        <Button className="schedule-button" onClick={this.openInfo} > Mer info </Button>
+        {infoModal}
+        <Button className="schedule-button" onClick={this.openBooking} > Boka </Button>
+        {bookingModal}
       </div>
     );
   }
@@ -73,8 +99,9 @@ class ScheduleComp extends Component {
 }
 
 ScheduleComp.propTypes = {
-  title: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired
+  pass: PropTypes.object.isRequired,
+  moreInfo: PropTypes.func.isRequired,
+  book: PropTypes.func.isRequired
 };
 
 export default ScheduleComp;
