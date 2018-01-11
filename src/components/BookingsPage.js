@@ -20,7 +20,9 @@ BookingsPage.propTypes = {
  bookings: PropTypes.shape({
     warning: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired
+    time: PropTypes.string.isRequired,
+    trainer: PropTypes.string,
+    value: PropTypes.integer
   }),
   addBooking: PropTypes.func.isRequired,
   removeBooking: PropTypes.func.isRequired
