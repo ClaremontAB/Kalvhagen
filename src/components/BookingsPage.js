@@ -10,7 +10,8 @@ const BookingsPage = props =>
        "time": props.bookings.time,
        "slot": props.bookings.value}}
       book={props.addBooking}
-      moreInfo={props.removeBooking} />
+      moreInfo={props.removeBooking}
+      />
   </div>
 );
 

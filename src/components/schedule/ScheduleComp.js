@@ -90,7 +90,7 @@ class ScheduleComp extends Component {
         <Link to="/trainers"> <h3>Sten Hård </h3></Link>
         <Button className="schedule-button" onClick={this.openInfo} > Mer info </Button>
         {infoModal}
-        <Button className="schedule-button" onClick={this.openBooking} > Boka </Button>
+         {this.props.pass.slot ? <Button className="schedule-button" onClick={this.openBooking} > Boka </Button> : ""}
         {bookingModal}
       </div>
     );
@@ -100,8 +100,8 @@ class ScheduleComp extends Component {
 
 ScheduleComp.propTypes = {
   pass: PropTypes.object.isRequired,
-  moreInfo: PropTypes.func.isRequired,
-  book: PropTypes.func.isRequired
+  moreInfo: PropTypes.func,
+  book: PropTypes.func
 };
 
 export default ScheduleComp;
