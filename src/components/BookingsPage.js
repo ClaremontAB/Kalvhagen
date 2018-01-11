@@ -8,7 +8,8 @@ const BookingsPage = props =>
     <ScheduleComp
       pass={{"title":props.bookings.title,
        "time": props.bookings.time,
-       "slot": props.bookings.value}}
+       "slot": props.bookings.value,
+        "trainer": props.bookings.trainer}}
       book={props.addBooking}
       moreInfo={props.removeBooking}
       />

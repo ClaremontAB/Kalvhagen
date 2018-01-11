@@ -87,7 +87,7 @@ class ScheduleComp extends Component {
         <h3> {this.props.pass.title}</h3>
         <h4> {this.props.pass.time}</h4>
         <h4> {this.props.pass.slot > 0 ? "Lediga platser: " + this.props.pass.slot : "Fullbokat"}</h4>
-        <Link to="/trainers"> <h3>Sten Hård </h3></Link>
+        <Link to="/trainers"> <h3> {this.props.pass.trainer} </h3></Link>
         <Button className="schedule-button" onClick={this.openInfo} > Mer info </Button>
         {infoModal}
          {this.props.pass.slot ? <Button className="schedule-button" onClick={this.openBooking} > Boka </Button> : ""}
